@@ -15,13 +15,13 @@ public class MaxNumber<T extends Comparable> {
     public static void main(String[] args) {
         System.out.println("Welcome to Finding Maximum number program");
 
-        new MaxNumber<Integer>(55, 95, 59).toPrint();
-        new MaxNumber<Float>(2.3f, 3.4f, 4.5f).toPrint();
-        new MaxNumber<String>("Apple", "Peach", "Banana").toPrint();
+        new MaxNumber<Integer>(55, 95, 59).testMaximum();
+        new MaxNumber<Float>(2.3f, 3.4f, 4.5f).testMaximum();
+        new MaxNumber<String>("Apple", "Peach", "Banana").testMaximum();
 
     }
 
-    public <T extends Comparable> T findMaxNum(T a, T b, T c) {
+    public static <T extends Comparable> T findMaxNum(T a, T b, T c) {
         T max = a;
 
         if (b.compareTo(max) > 0)
@@ -34,7 +34,7 @@ public class MaxNumber<T extends Comparable> {
         return max;
     }
 
-    public void toPrint() {
-        findMaxNum(a, b, c);
+    public void testMaximum() {
+        MaxNumber.findMaxNum(a, b, c);
     }
 }
