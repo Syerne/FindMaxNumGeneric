@@ -37,12 +37,14 @@ public class MaxNumber<T extends Comparable> {
         if (e.compareTo(max) > 0)
             max = e;
 
-        System.out.println("Maximum Number : " + max);
-
         return max;
     }
 
     public void testMaximum() {
-        MaxNumber.findMaxNum(a, b, c, d, e);
+        T max = MaxNumber.findMaxNum(a, b, c, d, e);
+        printMax(max);
+    }
+    public static <T> void printMax(T max){
+        System.out.println("Maximum Number : " + max);
     }
 }
