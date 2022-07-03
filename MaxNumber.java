@@ -6,24 +6,24 @@ public class MaxNumber {
 
         MaxNumber maxValue = new MaxNumber();
         maxValue.findMaxNum(55, 95, 59);
-        maxValue.findMaximum(2.3f, 3.4f, 4.5f);
-        maxValue.findMaximum("Apple", "Peach", "Banana");
+        maxValue.findMaxNum(2.3f, 3.4f, 4.5f);
+        maxValue.findMaxNum("Apple", "Peach", "Banana");
     }
 
-    public Integer findMaxNum(Integer a, Integer b, Integer c) {
-        Integer max = a;
+    public <T extends Comparable> T findMaxNum(T a, T b, T c) {
+        T max = a;
 
         if (b.compareTo(max) > 0)
             max = b;
         if (c.compareTo(max) > 0)
             max = c;
 
-        System.out.println("Maximum Number in Integer : " + max);
+        System.out.println("Maximum Number : " + max);
 
         return max;
     }
 
-    public Float findMaximum(Float a, Float b, Float c) {
+   /* public Float findMaximum(Float a, Float b, Float c) {
         Float max = a;
         if (b.compareTo(max) > 0)
             max = b;
@@ -45,5 +45,5 @@ public class MaxNumber {
         System.out.println("Maximum String in String : " + max);
 
         return max;
-    }
+    }*/
 }
