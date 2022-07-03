@@ -4,18 +4,31 @@ public class MaxNumber {
     public static void main(String[] args) {
         System.out.println("Welcome to Finding Maximum number program");
 
-        MaxNumber maxIntValue = new MaxNumber();
-        maxIntValue.findMaxNum(55, 95, 59);
+        MaxNumber maxValue = new MaxNumber();
+        maxValue.findMaxNum(55, 95, 59);
+        maxValue.findMaximum(2.3f, 3.4f, 4.5f);
     }
-    public int findMaxNum(Integer a, Integer b, Integer c){
+
+    public Integer findMaxNum(Integer a, Integer b, Integer c) {
         Integer max = a;
 
         if (b.compareTo(max) > 0)
-        max = b;
+            max = b;
         if (c.compareTo(max) > 0)
-        max = c;
+            max = c;
 
-        System.out.println("Maximun Number is : " + max);
+        System.out.println("Maximun Number in Integer : " + max);
+
+        return max;
+    }
+
+    public Float findMaximum(Float a, Float b, Float c) {
+        Float max = a;
+        if (b.compareTo(max) > 0)
+            max = b;
+        if (c.compareTo(max) > 0)
+            max = c;
+        System.out.println("Maximum Number in Float = " + max);
 
         return max;
     }
